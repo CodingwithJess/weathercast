@@ -2,10 +2,12 @@ import React, {useState, useEffect} from "react";
 import {Container, Row, Col} from "reactstrap";
 import moment from "moment";
 import sampleData from "./data/sample.json";
-import SearchBar from "../src/components/SearchBar"
-import DayCard from "../src/components/DayCard"
-import DayDetails from "../src/components/DayDetails"
+import SearchBar from "./components/SearchBar"
+import DayCard from "./components/DayCard"
+import DayDetails from "./components/DayDetails"
+import Jumbotron from "./components/Jumbotron"
 import API from "./utils/API"
+import jumbotronArea from "./components/Jumbotron";
 
 function App() {
   const [weatherInfo, setWeatherInfo] = useState({
@@ -43,6 +45,7 @@ function App() {
 
   return (
     <Container>
+      <Jumbotron/>
       <Row>
         <Col md={7}><h1>Weather for {location}</h1></Col>
         <Col md={5}>
